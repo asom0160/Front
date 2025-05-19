@@ -27,7 +27,7 @@ const PortfolioLinks = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:3001/projects")
+      .get("http://13.124.55.250:3001/projects")
       .then((response) => {
         console.log(response.data);
         setProjects(response.data);
@@ -64,8 +64,8 @@ const PortfolioLinks = () => {
           >
             <div className="w-full h-70 mb-4 overflow-hidden rounded-lg">
               <Image
-                src={project.image}
-                alt={project.title}
+                src={project.image.trim()}
+                alt={project.title.trim()}
                 width={400} // 원하는 너비
                 height={250}
                 className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
@@ -73,12 +73,12 @@ const PortfolioLinks = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                {project.title}
+                {project.title.trim()}
               </h2>
             </div>
             <div className="flex justify-between items-center mt-4">
               <Link
-                href={project.github}
+                href={project.github.trim()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 hover:underline"

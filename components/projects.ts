@@ -3,7 +3,7 @@ import { Project } from "@/app/type/type";
 export const projects: Project[] = [
     {
         id: 1,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOx48jv79wUQlK_Pz7beCDQPM9rScxdmAbRQ&s ",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOx48jv79wUQlK_Pz7beCDQPM9rScxdmAbRQ&s",
         url: "https://asom0160.github.io/team_portpolio/",
         title: "Instargram 프로젝트",
         github: "https://github.com/asom0160/team_portpolio.git",
