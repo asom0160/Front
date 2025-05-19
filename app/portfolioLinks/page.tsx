@@ -27,7 +27,7 @@ const PortfolioLinks = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/projects")
+      .get("http://127.0.0.1:3001/projects")
       .then((response) => {
         console.log(response.data);
         setProjects(response.data);
@@ -66,6 +66,8 @@ const PortfolioLinks = () => {
               <Image
                 src={project.image}
                 alt={project.title}
+                width={400} // 원하는 너비
+                height={250}
                 className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
               />
             </div>

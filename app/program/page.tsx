@@ -37,6 +37,8 @@ const Program = () => {
           <Image
             src={program.src}
             alt={program.alt}
+            width={200}
+            height={200}
             className="w-20 h-20 sm:w-24 sm:h-24 object-contain transition-transform duration-300 hover:scale-110"
           />
           <p className="mt-3 text-sm font-medium text-gray-700 tracking-wide text-center">

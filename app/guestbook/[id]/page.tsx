@@ -36,7 +36,7 @@ export default function GuestbookCards() {
     const confirmed = confirm("정말로 삭제하시겠습니까?");
     if (confirmed && guestbookDetails) {
       try {
-        await axios.delete(`http://127.0.0.1:3001/users/${guestbookDetails.id}`); // 삭제 API 호출
+        await axios.delete(`http://13.124.55.250:3001/users/${guestbookDetails.id}`); // 삭제 API 호출
         console.log(`${guestbookDetails.id}번 방명록이 삭제되었습니다.`);
         router.push("/guestbook"); // 삭제 후 리디렉션
       } catch (error) {
