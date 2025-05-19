@@ -12,10 +12,10 @@ export default function GuestBook() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/users")
+      .get("http://127.0.0.1:3001/users")
       .then((response) => {
         console.log("✅ 서버 응답:", response.data);
-  
+
         const data = response.data;
         if (Array.isArray(data)) {
           setGuestbooks(data);
@@ -27,8 +27,8 @@ export default function GuestBook() {
       })
       .catch((error) => console.error("❌ 데이터 요청 실패:", error));
   }, []);
-  
-  
+
+
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -41,7 +41,7 @@ export default function GuestBook() {
         {guestbooks.map((guestbook) => (
           <div key={guestbook.id}>
             <Link href={`/guestbook/${guestbook.id}`}>
-              <GuestbookCard guestbook={guestbook}/>
+              <GuestbookCard guestbook={guestbook} />
             </Link>
           </div>
         ))}

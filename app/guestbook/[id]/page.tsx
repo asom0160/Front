@@ -17,7 +17,7 @@ export default function GuestbookCards() {
   useEffect(() => {
     const fetchGuestbook = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/users/${id}`); // id를 URL에 삽입
+        const response = await axios.get(`http://127.0.0.1:3001/users/${id}`); // id를 URL에 삽입
         setGuestbookDetails(response.data);
       } catch (error) {
         console.error("데이터를 불러오는 데 실패했습니다:", error);
@@ -36,7 +36,7 @@ export default function GuestbookCards() {
     const confirmed = confirm("정말로 삭제하시겠습니까?");
     if (confirmed && guestbookDetails) {
       try {
-        await axios.delete(`http://localhost:3001/users/${guestbookDetails.id}`); // 삭제 API 호출
+        await axios.delete(`http://127.0.0.1:3001/users/${guestbookDetails.id}`); // 삭제 API 호출
         console.log(`${guestbookDetails.id}번 방명록이 삭제되었습니다.`);
         router.push("/guestbook"); // 삭제 후 리디렉션
       } catch (error) {

@@ -16,7 +16,7 @@ export default function LoginInput() {
     setError("");
     try {
       // 로그인 API 호출
-      const response = await axios.post("http://localhost:3001/login/login", formData);
+      const response = await axios.post("http://127.0.0.1:3001/login/login", formData);
       console.log("Login successful:", response.data);
 
       if (response.data.success) {

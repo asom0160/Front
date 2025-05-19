@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 const Program = () => {
@@ -33,7 +34,7 @@ const Program = () => {
           onMouseEnter={() => setCurrentIndex(index)}
           onMouseLeave={() => setCurrentIndex(null)}
         >
-          <img
+          <Image
             src={program.src}
             alt={program.alt}
             className="w-20 h-20 sm:w-24 sm:h-24 object-contain transition-transform duration-300 hover:scale-110"

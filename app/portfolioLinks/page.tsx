@@ -6,6 +6,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { Project } from "../type/type";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: {},
@@ -62,7 +63,7 @@ const PortfolioLinks = () => {
             variants={cardVariants}
           >
             <div className="w-full h-70 mb-4 overflow-hidden rounded-lg">
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
